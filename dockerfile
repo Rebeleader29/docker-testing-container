@@ -1,3 +1,7 @@
 FROM ubuntu:26.04
 
-RUN echo "hello"
+WORKDIR /home/test/
+
+COPY program.sh /home/test/program.sh
+
+RUN echo "Runing Hello World" && ./program.sh
